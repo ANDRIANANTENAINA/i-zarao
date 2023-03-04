@@ -4,18 +4,38 @@ import '../../index.css';
 import logo from '../../image/Group 2logo.svg';
 import user from '../../image/img_user.jpg'
 import {Link} from "react-router-dom";
+import Login from "../Login/login";
+
 
 
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loggedIn: true
+        };
+    }
+
+    handleLogout = () => {
+        localStorage.removeItem('token');
+        this.setState({
+            loggedIn: false,
+        });
+    }
 
     showNotif() {
         const notif = document.querySelector('.notif');
         notif.classList.toggle('active');
     }
-    render(){
+
+
+    render() {
+        if (!this.state.loggedIn) {
+            return <Login/>
+        }
         return(
             <Fragment>
-
                 <div className="nav z-30">
                     <Link to="/home" className="logo">
                         <img src= {logo} alt=""/>
@@ -62,6 +82,7 @@ class Navbar extends Component {
                                 <Link to="/profile">
                                     <img src={user} alt=""/>
                                 </Link>
+                                <Link to="/login" onClick={this.handleLogout}>Déconnexion</Link>
                             </div>
                         </div>
                     </div>
