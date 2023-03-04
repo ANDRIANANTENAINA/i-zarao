@@ -82,7 +82,9 @@ class Navbar extends Component {
                                 <Link to="/profile">
                                     <img src={user} alt=""/>
                                 </Link>
-                                <Link to="/login" onClick={this.handleLogout}>Déconnexion</Link>
+                                <Link to="/login" onClick={this.handleLogout}>
+                                    <img src={svg} alt=""/>
+                                </Link>
                             </div>
                         </div>
                     </div>
