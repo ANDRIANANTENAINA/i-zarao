@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="913221f4-0f20-4dca-84bd-4f4f43a26876" name="Changes" comment="fix bug">
+    <list default="true" id="913221f4-0f20-4dca-84bd-4f4f43a26876" name="Changes" comment="home">
+      <change afterPath="$PROJECT_DIR$/src/component/Home/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Home/home.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/NavBar/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/NavBar/nav.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -39,6 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677945054496</updated>
       <workItem from="1677945058050" duration="16000" />
-      <workItem from="1677947326454" duration="9822000" />
+      <workItem from="1677947326454" duration="15796000" />
     </task>
     <task id="LOCAL-00001" summary="fix bug">
       <created>1677951132599</created>
@@ -74,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677957912520</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="home">
+      <created>1677961236902</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677961236902</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="home" />
+    <option name="LAST_COMMIT_MESSAGE" value="home" />
   </component>
 </project>
