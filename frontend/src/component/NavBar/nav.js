@@ -2,8 +2,6 @@ import React, {Component, Fragment}from "react";
 import './nav.css';
 import '../../index.css';
 import logo from '../../image/Group 2logo.svg';
-import search from '../../image/search.svg'
-import chat from '../../image/chat.svg'
 import user from '../../image/img_user.jpg'
 
 
