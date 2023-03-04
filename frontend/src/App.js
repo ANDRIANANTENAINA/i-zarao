@@ -1,23 +1,21 @@
 import './App.css';
-import Navbar from "./component/NavBar/nav";
 import Home from "./component/Home/home";
-import Logo from "./component/Login/login";
+import Navbar from "./component/NavBar/nav";
 import Chat from "./component/Chat/chat";
-import {BrowserRouter as Router,Route , Switch} from "react-router-dom";
-import React from "react";
-
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Profile from "./component/Profile/profile";
 
 function App() {
   return (
     <div className="App">
-        <Navbar/>
         <Router>
-            <Switch>
-                <Route path="/" exact component={Home}/>
-                <Route path="/chat" exact component={Chat}/>
-            </Switch>
+            <Navbar/>
+            <Routes>
+                <Route path='/home' element={<Home/>}/>
+                <Route path='/chat' element={<Chat/>}/>
+                <Route path='/profile' element={<Profile/>}/>
+            </Routes>
         </Router>
-        <Logo/>
     </div>
   );
 }
