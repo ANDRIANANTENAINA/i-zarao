@@ -1,6 +1,7 @@
 import React from "react";
 import './profile.css';
 import user from '../../image/img_user.jpg'
+import Tabs from "../ProfileTab/Tabs";
 
 const Profile = () =>{
     return(
@@ -23,6 +24,17 @@ const Profile = () =>{
                 </div>
             </div>
             <div className="p-5">
+                <Tabs>
+                    <div label="Information" className="p-5">
+                        See ya later, <em>Alligator</em>!
+                    </div>
+                    <div label="Gestion mot de passe" className="p-5">
+                        After 'while, <em>Crocodile</em>!
+                    </div>
+                    <div label="Mes Postes" className="p-5">
+                        Nothing to see here, this tab is <em>extinct</em>!
+                    </div>
+                </Tabs>
             </div>
         </div>
     )
