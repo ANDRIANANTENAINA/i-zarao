@@ -31,3 +31,22 @@
     width: 60px;
     border-radius: 50%;
 }
+
+.active{
+    display: none;
+    transition: .5s;
+}
+
+.notif{
+    width: 350px;
+    height: 500px;
+    background: #FFFFFF;
+    position: absolute;
+    transform: translate(-40%);
+    transition: .5s;
+    top: 70px;
+}
+
+.count-notif{
+    font-size: xx-small;
+}
