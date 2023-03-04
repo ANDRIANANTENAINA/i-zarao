@@ -4,19 +4,39 @@ import '../../index.css';
 import logo from '../../image/Group 2logo.svg';
 import user from '../../image/img_user.jpg'
 import {Link} from "react-router-dom";
+import Login from "../Login/login";
+
 
 
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loggedIn: true
+        };
+    }
+
+    handleLogout = () => {
+        localStorage.removeItem('token');
+        this.setState({
+            loggedIn: false,
+        });
+    }
 
     showNotif() {
         const notif = document.querySelector('.notif');
         notif.classList.toggle('active');
     }
-    render(){
+
+
+    render() {
+        if (!this.state.loggedIn) {
+            return <Login/>
+        }
         return(
             <Fragment>
-
-                <div className="nav shadow-xl z-30">
+                <div className="nav z-30">
                     <Link to="/home" className="logo">
                         <img src= {logo} alt=""/>
                     </Link>
@@ -41,13 +61,13 @@ class Navbar extends Component {
                             </Link>
 
                             <div className="flex flex-col">
-                                <div className="count-notif absolute top-7 ml-3 bg-red-600 rounded-full text-white px-1">
-                                    9+
+                                <div className="count-notif absolute top-7 ml-3 bg-red-800 rounded-full text-white px-1">
+                                    99+
                                 </div>
                                 <div className="text-black hover:text-white" onClick={this.showNotif}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><path fill="currentColor" d="M440.08 341.31c-1.66-2-3.29-4-4.89-5.93c-22-26.61-35.31-42.67-35.31-118c0-39-9.33-71-27.72-95c-13.56-17.73-31.89-31.18-56.05-41.12a3 3 0 0 1-.82-.67C306.6 51.49 282.82 32 256 32s-50.59 19.49-59.28 48.56a3.13 3.13 0 0 1-.81.65c-56.38 23.21-83.78 67.74-83.78 136.14c0 75.36-13.29 91.42-35.31 118c-1.6 1.93-3.23 3.89-4.89 5.93a35.16 35.16 0 0 0-4.65 37.62c6.17 13 19.32 21.07 34.33 21.07H410.5c14.94 0 28-8.06 34.19-21a35.17 35.17 0 0 0-4.61-37.66ZM256 480a80.06 80.06 0 0 0 70.44-42.13a4 4 0 0 0-3.54-5.87H189.12a4 4 0 0 0-3.55 5.87A80.06 80.06 0 0 0 256 480Z"/></svg>
                                 </div>
-                                <div className="notif active rounded shadow-2xl absolute p-2 z-30">
+                                <div className="notif active rounded shadow absolute p-2 z-30">
                                     gvudyuybduybdu
                                 </div>
                             </div>
@@ -56,15 +76,15 @@ class Navbar extends Component {
                         <div>
                             <div className="profile flex flex-row space-x-2 items-center">
                                 <div>
-                                    <h3>ANDRIARILALA</h3>
-                                    <p>Herizo Niaina</p>
+                                    <h3>ANDRIAMANJATOHASA</h3>
+                                    <p>Antson'Ny Famonjena Hasin'Ny Ainasoa Désirée</p>
                                 </div>
                                 <Link to="/profile">
                                     <img src={user} alt=""/>
                                 </Link>
-                                <div className="logout cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M6 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H6zm10.293 5.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L18.586 13H10a1 1 0 1 1 0-2h8.586l-2.293-2.293a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-                                </div>
+                                <Link to="/login" onClick={this.handleLogout}>
+                                    <img src={svg} alt=""/>
+                                </Link>
                             </div>
                         </div>
                     </div>

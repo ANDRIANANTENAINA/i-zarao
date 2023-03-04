@@ -45,12 +45,14 @@ public function login(Request $request)
     $credentials = $request->only('email', 'password');
 
     if (Auth::attempt($credentials)) {
-        $user = $request->user();
-        $token = $user->createToken('auth-token')->accessToken;
-        return response()->json(['token' => $token], 200);
+        $token = $request->user()->createToken('API Token')->accessToken;
+        return response()->json([
+            'token' => $token,
+            'redirectTo' => '/home' // This is the URL to redirect to
+        ]);
+    } else {
+        return response()->json(['error' => 'Invalid credentials'], 401);
     }
-
-    return response()->json(['error' => 'Invalid credentials'], 401);
 }
 
 }
