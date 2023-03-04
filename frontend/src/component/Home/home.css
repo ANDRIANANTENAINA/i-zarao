@@ -4,3 +4,13 @@
     grid-gap: 10px;
     grid-template-columns: 100px 1fr;
 }
+
+.taille{
+    font-size: 12px;
+    align-items: center;
+    margin: auto;
+}
+
+.taille_title{
+    font-size: 20px;
+}
