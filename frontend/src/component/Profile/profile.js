@@ -16,9 +16,6 @@ const Profile = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="logout absolute top-15 right-2 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M6 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H6zm10.293 5.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L18.586 13H10a1 1 0 1 1 0-2h8.586l-2.293-2.293a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-                    </div>
                     <div className="mt-20 text-center border-b pb-4">
                         <h1 className="text-4xl font-medium text-gray-700">ANDRIANTSOA</h1>
                         <p className="font-light text-gray-600 mt-3">Valiavo Haja Ny Aina</p>
