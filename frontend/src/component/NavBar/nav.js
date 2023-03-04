@@ -56,8 +56,8 @@ class Navbar extends Component {
                         <div>
                             <div className="profile flex flex-row space-x-2 items-center">
                                 <div>
-                                    <h3>ANDRIANTSOA</h3>
-                                    <p>Valiavo Haja Ny Aina</p>
+                                    <h3>ANDRIARILALA</h3>
+                                    <p>Herizo Niaina</p>
                                 </div>
                                 <Link to="/profile">
                                     <img src={user} alt=""/>

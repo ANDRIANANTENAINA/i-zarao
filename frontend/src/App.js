@@ -8,6 +8,7 @@ import Profile from "./component/Profile/profile";
 function App() {
   return (
     <div className="App">
+
         <Router>
             <Navbar/>
             <Routes>
