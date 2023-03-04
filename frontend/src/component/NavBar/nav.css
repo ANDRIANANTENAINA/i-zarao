@@ -1,0 +1,52 @@
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #708D23;
+    width: 100vw;
+    align-items: center;
+}
+
+.logo img{
+    height: 90px;
+    width: 190px;
+}
+
+.tag{
+
+}
+
+.search{
+
+}
+
+.chat{
+
+}
+
+
+.profile img{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.active{
+    display: none;
+    transition: .5s;
+}
+
+.notif{
+    width: 350px;
+    height: 500px;
+    background: #FFFFFF;
+    position: absolute;
+    transform: translate(-40%);
+    transition: .5s;
+    top: 70px;
+}
+
+.count-notif{
+    font-size: xx-small;
+}
