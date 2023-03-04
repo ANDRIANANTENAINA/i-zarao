@@ -16,6 +16,9 @@ const Profile = () =>{
                             </div>
                         </div>
                     </div>
+                    <div className="logout absolute top-15 right-2 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M6 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H6zm10.293 5.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L18.586 13H10a1 1 0 1 1 0-2h8.586l-2.293-2.293a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
+                    </div>
                     <div className="mt-20 text-center border-b pb-4">
                         <h1 className="text-4xl font-medium text-gray-700">ANDRIANTSOA</h1>
                         <p className="font-light text-gray-600 mt-3">Valiavo Haja Ny Aina</p>
@@ -26,10 +29,107 @@ const Profile = () =>{
             <div className="p-5">
                 <Tabs>
                     <div label="Information" className="p-5">
-                        See ya later, <em>Alligator</em>!
+                        <div>
+                            <form>
+                                <div className="shadow sm:overflow-hidden sm:rounded-md">
+                                    <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
+                                        <div className="grid grid-cols-3 gap-6">
+                                            <div className="col-span-3 sm:col-span-2">
+                                                <label htmlFor="company-website"
+                                                       className="block text-sm font-medium text-gray-700">Nom</label>
+                                                <div className="mt-1 flex rounded shadow-sm">
+                                                    <input type="text" name="nom" id="nom"
+                                                           className="block w-full flex-1 rounded-none border-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                           placeholder="nom"/>
+                                                </div>
+                                            </div>
+
+                                            <div className="col-span-3 sm:col-span-2">
+                                                <label htmlFor="company-website"
+                                                       className="block text-sm font-medium text-gray-700">Prènoms</label>
+                                                <div className="mt-1 flex rounded shadow-sm">
+                                                    <input type="text" name="prenom" id="prenom"
+                                                           className="block w-full flex-1 rounded-none border-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                           placeholder="Prènoms"/>
+                                                </div>
+                                            </div>
+
+                                            <div className="col-span-3 sm:col-span-2">
+                                                <label htmlFor="company-website"
+                                                       className="block text-sm font-medium text-gray-700">E-mail</label>
+                                                <div className="mt-1 flex rounded shadow-sm">
+                                                    <input type="email" name="email" id="email"
+                                                           className="block w-full flex-1 rounded-none border-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                           placeholder="addresse email"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div className="bg-gray-50 px-4 py-3 text-center sm:px-6">
+                                        <button type="submit"
+                                                className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            Enregistrer
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
                     </div>
                     <div label="Gestion mot de passe" className="p-5">
-                        After 'while, <em>Crocodile</em>!
+                        <form>
+                            <div className="shadow sm:overflow-hidden sm:rounded-md">
+                                <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
+                                    <div className="grid grid-cols-3 gap-6">
+
+                                        <div className="col-span-3 sm:col-span-2">
+                                            <label htmlFor="password"
+                                                   className="block text-sm font-medium text-gray-700">Mot de passe
+                                                Actuelle</label>
+                                            <div className="mt-1 flex rounded shadow-sm">
+                                                <input type="password" name="password" id="password"
+                                                       className="block w-full flex-1 rounded-none border-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                       placeholder="Mot de passe Actuelle"/>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-span-3 sm:col-span-2">
+                                            <label htmlFor="newPassword"
+                                                   className="block text-sm font-medium text-gray-700">Nouveau Mot de
+                                                Passe</label>
+                                            <div className="mt-1 flex rounded shadow-sm">
+                                                <input type="password" name="newPassword" id="newPassword"
+                                                       className="block w-full flex-1 rounded-none border-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                       placeholder="Nouveau mot de passe"/>
+                                            </div>
+
+                                        </div>
+
+                                        <div className="col-span-3 sm:col-span-2">
+                                            <label htmlFor="confirmPassword"
+                                                   className="block text-sm font-medium text-gray-700">Confirmer votre
+                                                mot de
+                                                passe</label>
+                                            <div className="mt-1 flex rounded shadow-sm">
+                                                <input type="password" name="confirmPassword" id="confirmPassword"
+                                                       className="block w-full flex-1 rounded-none border-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                       placeholder="confirmer votre mot de passe"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="bg-gray-50 px-4 py-3 text-center sm:px-6">
+                                    <button type="submit"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                        Modifier
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
                     <div label="Mes Postes" className="p-5">
                         Nothing to see here, this tab is <em>extinct</em>!
