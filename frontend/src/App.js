@@ -30,7 +30,6 @@ function App() {
 
     return (
         <div className="App">
-            <AuthProvider>
                 {!isLoggedIn &&
                     <Login/>
                 }
@@ -44,7 +43,6 @@ function App() {
                         </Routes>
                     </Router>
                 )}
-            </AuthProvider>
         </div>
     );
 }
