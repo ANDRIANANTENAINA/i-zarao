@@ -27,11 +27,11 @@ const Home = () =>{
                     {data.map(item => (
                         <div className="card border-b-2 relative py-2">
                             <p className="text-gray-500 hover:text-gray-700 pl-2 taille">0 votes</p>
-                            <Link to={`/Post/${item.id}/${item.title}`}  key={item.id} className="text-indigo-800 hover:text-indigo-900 taille_title "> {item.title} </Link>
+                            <Link to={`/Post/${item.id}/${item.title}`}  key={item.id} className="text-indigo-800 hover:text-indigo-900 taille_title text-lg"> {item.title} </Link>
                             <p className="text-gray-500 hover:text-gray-700 pl-2 taille">{item.responses.length} answers</p>
                             <div className="flex flex-row space-x-5 text-xs  ">
                                 {item.tags.map(item2 => (
-                                    <p key={item2.id} className="bg-amber-400 px-2 rounded hover:bg-amber-600 ">{item2.tag}</p>
+                                    <p key={item2.id} className="bg-amber-400 px-1 rounded hover:bg-amber-600 text-sm">{item2.tag}</p>
                                 ))}
                             </div>
                             <p className="text-gray-500 hover:text-gray-700 pl-2 taille">0 views</p>
