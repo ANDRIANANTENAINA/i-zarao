@@ -4,6 +4,7 @@ import './profile.css';
 import userPict from '../../image/img_user.jpg'
 import Tabs from "../ProfileTab/Tabs";
 
+
 const Profile = () =>{
     const userData  = useContext(AuthContext);
     return(

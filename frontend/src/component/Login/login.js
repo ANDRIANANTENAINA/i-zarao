@@ -1,27 +1,22 @@
 // src/components/Login.js
 
-import React, {useContext, useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import { AuthContext } from '../AuthContext';
 
-function Login(props) {
-
-    const {setUserData} = useContext(AuthContext);
+function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios
-            .post('http://localhost:8000/api/login', { email, password })
-            .then((response) => {
-                console.log(response.data.user);
+        axios.post('http://localhost:8000/api/login', { email, password })
+            .then(response => {
                 localStorage.setItem('token', response.data.token);
-                setUserData(response.data.user); // Set the user data in the context
-                window.location.href = response.data.redirectTo;
+                window.location.href = response.data.redirectTo; // This is the line that redirects to the secret page
                 setError(null);
             })
-            .catch((error) => {
+            .catch(error => {
                 setError('Invalid email or password');
             });
     };
@@ -63,8 +58,6 @@ function Login(props) {
             </button>
         </form>
     );
-
-
 }
 
 export default Login;
