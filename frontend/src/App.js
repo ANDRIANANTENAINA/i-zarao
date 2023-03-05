@@ -1,22 +1,36 @@
 import './App.css';
-import Home from "./component/Home/home";
 import Navbar from "./component/NavBar/nav";
-import Chat from "./component/Chat/chat";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Profile from "./component/Profile/profile";
+import {BrowserRouter as Router} from "react-router-dom";
 import Login from "./component/Login/login";
 import {useEffect, useState} from "react";
-import Post from "./component/Post/Post";
+import axios from 'axios';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
         const token = localStorage.getItem('token');
 
+        const fetchUser = async () => {
+            try {
+                const response = await axios.get('/api/user', {
+                    headers: {
+                        Authorization: `Bearer ${token}` // pass the token in the headers of the request
+                    }
+                });
+
+                setUser(response.data); // set the user state with the response data
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
         if (token) {
             setIsLoggedIn(true);
         }
+
+        fetchUser();
     }, []);
 
     const handleLogin = () => {
@@ -35,7 +49,7 @@ function App() {
                 }
                 {isLoggedIn && (
                     <Router>
-                        <Navbar onLogout={handleLogout} />
+                        <Navbar onLogout={handleLogout} users={user} />
                     </Router>
                 )}
         </div>

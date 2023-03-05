@@ -50,3 +50,36 @@
 .count-notif{
     font-size: xx-small;
 }
+
+.notification{
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(128, 128, 128, 0.429);
+    align-items: center;
+    height: 50px;
+}
+
+.notification1{
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(114, 216, 249, 0.607);
+    align-items: center;
+    height: 50px;
+}
+
+
+.notification img{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+
+.notification1 img{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+
+}
+
+

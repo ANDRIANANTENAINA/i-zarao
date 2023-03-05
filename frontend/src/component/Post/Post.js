@@ -100,7 +100,7 @@ const  Post = () =>{
                     </div>
                 </div>
             ))}
-            <div className="flex flex-col mt-5">
+            <div className="flex flex-col mt-12">
                 <textarea className="send_ms mx-5 rounded p-2 border-2 border-gray-200 "
                           placeholder="vos question ?"></textarea>
                 <div className="btn_ms mx-5 mt-5 space-x-2">

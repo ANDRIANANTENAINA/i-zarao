@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Tag;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class TagSeeder extends Seeder
@@ -16,47 +17,86 @@ class TagSeeder extends Seeder
     {
         $tags = [
             [
-                'tag'     => 'tag 1',
+                'tag'     => 'python',
                 'post_id' => 1,
             ],
             [
-                'tag'     => 'tag 2',
+                'tag'     => 'php',
                 'post_id' => 2,
             ],
             [
-                'tag'     => 'tag 3',
+                'tag'     => 'javascript',
                 'post_id' => 3,
             ],
             [
-                'tag'     => 'tag 4',
-                'post_id' => 1,
-            ],
-            [
-                'tag'     => 'tag 5',
-                'post_id' => 2,
-            ],
-            [
-                'tag'     => 'tag 6',
-                'post_id' => 1,
-            ],
-            [
-                'tag'     => 'tag 7',
-                'post_id' => 3,
-            ],
-            [
-                'tag'     => 'tag 8',
+                'tag'     => 'java',
                 'post_id' => 4,
             ],
             [
-                'tag'     => 'tag 9',
+                'tag'     => 'c#',
                 'post_id' => 5,
             ],
             [
-                'tag'     => 'tag 10',
+                'tag'     => 'c++',
+                'post_id' => 6,
+            ],
+            [
+                'tag'     => 'c',
+                'post_id' => 7,
+            ],
+            [
+                'tag'     => 'ruby',
+                'post_id' => 8,
+            ],
+            [
+                'tag'     => 'go',
+                'post_id' => 9,
+            ],
+            [
+                'tag'     => 'swift',
+                'post_id' => 1,
+            ],
+            [
+                'tag'     => 'kotlin',
+                'post_id' => 2,
+            ],
+            [
+                'tag'     => 'rust',
+                'post_id' => 3,
+            ],
+            [
+                'tag'     => 'scala',
+                'post_id' => 1,
+            ],
+            [
+                'tag'     => 'perl',
+                'post_id' => 1,
+            ],
+            [
+                'tag'     => 'lua',
+                'post_id' => 2,
+            ],
+            [
+                'tag'     => 'haskell',
                 'post_id' => 5,
             ],
+            [
+                'tag'     => 'erlang',
+                'post_id' => 6,
+            ],
+            [
+                'tag'     => 'elixir',
+                'post_id' => 7,
+            ],
+            [
+                'tag'     => 'clojure',
+                'post_id' => 2,
+            ],
+            [
+                'tag'     => 'dart',
+                'post_id' => 6,
+            ]
         ];
-
         Tag::insert($tags);
     }
 }

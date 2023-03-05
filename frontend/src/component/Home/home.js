@@ -30,7 +30,7 @@ const Home = (results) =>{
                      results.results.map(item => (
                         <div className="card border-b-2 relative py-2">
                             <p className="text-gray-500 hover:text-gray-700 pl-2 taille">0 votes</p>
-                            <Link to={`/Post/${item.id}/${item.title}`}  key={item.id} className="text-indigo-800 hover:text-indigo-900 taille_title "> {item.title}</Link>
+                            <Link to={`/Post/${item.id}/${item.title}`}  key={item.id} className="text-indigo-800 text-left hover:text-indigo-900 taille_title "> {item.title}</Link>
                             <p className="text-gray-500 hover:text-gray-700 pl-2 taille">{item.responses.length} answers</p>
                             <div className="flex flex-row space-x-5 text-xs  ">
                                 {item.tags.map(item2 => (

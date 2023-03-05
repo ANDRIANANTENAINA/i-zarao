@@ -71,12 +71,12 @@ class Navbar extends Component {
                     <div className="flex flex-row justify-between w-full mx-5">
                         <div className="flex flex-row space-x-5 items-center justify-center">
                             <div className="tag">
-                                <input className="p-2 rounded shadow" type="text"/>
+                                <input className="p-2 rounded-full shadow" placeholder="python; rust; javaScript; ..." type="text"/>
                             </div>
                             <div className="search">
                                 <input
-                                    className="p-2 rounded shadow"
-                                    placeholder="Search for..."
+                                    className="p-2 rounded-full  shadow"
+                                    placeholder="chercher une poste ..."
                                     ref={input => this.search = input}
                                     onChange={this.handleInputChange}
                                 />
@@ -98,8 +98,18 @@ class Navbar extends Component {
                                 <div className="text-black hover:text-white" onClick={this.showNotif}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><path fill="currentColor" d="M440.08 341.31c-1.66-2-3.29-4-4.89-5.93c-22-26.61-35.31-42.67-35.31-118c0-39-9.33-71-27.72-95c-13.56-17.73-31.89-31.18-56.05-41.12a3 3 0 0 1-.82-.67C306.6 51.49 282.82 32 256 32s-50.59 19.49-59.28 48.56a3.13 3.13 0 0 1-.81.65c-56.38 23.21-83.78 67.74-83.78 136.14c0 75.36-13.29 91.42-35.31 118c-1.6 1.93-3.23 3.89-4.89 5.93a35.16 35.16 0 0 0-4.65 37.62c6.17 13 19.32 21.07 34.33 21.07H410.5c14.94 0 28-8.06 34.19-21a35.17 35.17 0 0 0-4.61-37.66ZM256 480a80.06 80.06 0 0 0 70.44-42.13a4 4 0 0 0-3.54-5.87H189.12a4 4 0 0 0-3.55 5.87A80.06 80.06 0 0 0 256 480Z"/></svg>
                                 </div>
-                                <div className="notif active rounded shadow-2xl absolute p-2 z-30">
-                                    gvudyuybduybdu
+                                <div className="notif active rounded shadow-2xl absolute p-3 m-1 z-30">
+                                   <div className = "flex flex-col space-y-2">
+                                        <div className="notification">
+                                            <img src={user} alt=""/>
+                                            <p> Herizo Niaina Commente votre code python</p>
+                                        </div>
+
+                                        <div className="notification1">
+                                            <img src={user} alt=""/>
+                                            <p> Finoana Commente votre code Javascript </p>
+                                        </div>
+                                   </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +117,7 @@ class Navbar extends Component {
                         <div>
                             <div className="profile flex flex-row space-x-2 items-center">
                                 <div>
-                                    <h3 className="text-xs">ANDRIAMANJATOHASA</h3>
+                                    <h3 className="text-xs">{this.props.users}</h3>
                                     <p className="text-xs">Antson'Ny Famonjena Hasin'Ny Ainasoa Désirée</p>
                                 </div>
                                 <Link to="/profile">

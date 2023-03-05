@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static create(array[] $tags)
+ * @method static insert(array[] $tags)
  */
 class Tag extends Model
 {
@@ -14,7 +15,7 @@ class Tag extends Model
 
     protected $fillable = [
         'tag',
-        'post_id',
+        'post_id'
     ];
 
     public function post(): \Illuminate\Database\Eloquent\Relations\BelongsToMany

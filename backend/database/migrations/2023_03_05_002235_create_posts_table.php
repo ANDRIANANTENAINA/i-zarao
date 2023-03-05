@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('slug')->nullable();
             $table->string('image')->nullable();
             $table->string('file')->nullable();
-            $table->string('status'); // published, draft, deleted
-            $table->string('type'); // post, page
-            $table->string('author');
+            $table->string('status')->default(0); // published, draft, deleted
+            $table->string('type')->default(1); // post, page
+            $table->string('author')->nullable();
 
 
             $table->unsignedBigInteger('user_id');

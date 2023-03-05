@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class PostController extends Controller
 {
@@ -34,12 +35,15 @@ class PostController extends Controller
         return response()->json($post);
     }
 
+    /**
+     * @throws ValidationException
+     */
     public function store(Request $request)
     {
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required',
-            'tags' => 'required',
+            'user_id' => 'required',
         ]);
 
         $post = Post::create($request->all());

@@ -37,7 +37,7 @@ function Login() {
                 <form onSubmit={handleSubmit}>
                     {error && <div>{error}</div>}
                     <img src={avatar}/>
-                        <h2 className="title">Welcome</h2>
+                        <h2 className="title">I-zarao</h2>
                         <div className="input-div one">
                             <div className="i">
                                 <i className="fas fa-user"></i>
