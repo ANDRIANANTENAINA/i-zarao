@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index()
-    {   // get all post and tags
-        $post = Post::with('tags')->get();
+    {   // get all post and tags and responses
+        $post = Post::with('tags', 'responses')->get();
 
         if($post->isEmpty())
             return response()->json(['message' => 'No posts found'], 404);
@@ -19,7 +19,8 @@ class PostController extends Controller
 
     public function show($id)
     {
-        $post = Post::find($id);
+        $post = Post::with('tags', 'responses')
+            ->where('id', $id)->get();
         return response()->json($post);
     }
 

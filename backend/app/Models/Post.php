@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static insert(array[] $posts)
+ * @method static find($id)
  */
 class Post extends Model
 {
@@ -24,14 +25,9 @@ class Post extends Model
         'user_id'
     ];
 
-    public function response(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function responses(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Response::class);
-    }
-
-    public function vote(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(Vote::class);
     }
 
     public function tags(): \Illuminate\Database\Eloquent\Relations\HasMany
