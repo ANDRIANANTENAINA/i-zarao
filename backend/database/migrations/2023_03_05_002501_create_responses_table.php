@@ -26,8 +26,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->unsignedBigInteger('vote_id');
-            $table->foreign('vote_id')->references('id')->on('votes');
         });
     }
 
