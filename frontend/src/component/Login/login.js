@@ -12,7 +12,6 @@ function Login() {
         event.preventDefault();
         axios.post('http://localhost:8000/api/login', { email, password })
             .then(response => {
-                console.log(response.data);
                 localStorage.setItem('token', response.data.token);
                 window.location.href = response.data.redirectTo; // This is the line that redirects to the secret page
                 setError(null);

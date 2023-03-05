@@ -3,6 +3,7 @@ import './profile.css';
 import user from '../../image/img_user.jpg'
 import Tabs from "../ProfileTab/Tabs";
 
+
 const Profile = () =>{
     return(
         <div className="z-10">
