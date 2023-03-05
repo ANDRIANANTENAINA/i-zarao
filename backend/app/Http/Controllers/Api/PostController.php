@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index()
-    {
+    {   // get all post and tags
         $post = Post::with('tags')->get();
 
         if($post->isEmpty())
