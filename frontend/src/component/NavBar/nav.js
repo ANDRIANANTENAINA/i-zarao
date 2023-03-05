@@ -76,8 +76,8 @@ class Navbar extends Component {
                         <div>
                             <div className="profile flex flex-row space-x-2 items-center">
                                 <div>
-                                    <h3>ANDRIAMANJATOHASA</h3>
-                                    <p>Antson'Ny Famonjena Hasin'Ny Ainasoa Désirée</p>
+                                    <h3 className="text-xs">ANDRIAMANJATOHASA</h3>
+                                    <p className="text-xs">Antson'Ny Famonjena Hasin'Ny Ainasoa Désirée</p>
                                 </div>
                                 <Link to="/profile">
                                     <img src={user} alt=""/>
