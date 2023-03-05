@@ -11,4 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 class VoteComment extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'comment_id',
+    ];
 }

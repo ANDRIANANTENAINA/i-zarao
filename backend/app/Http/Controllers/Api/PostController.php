@@ -10,7 +10,10 @@ class PostController extends Controller
 {
     public function index()
     {
-        $post = Post::all();
+        $post = Post::with('tags')->get();
+
+        if($post->isEmpty())
+            return response()->json(['message' => 'No posts found'], 404);
         return response()->json($post);
     }
 

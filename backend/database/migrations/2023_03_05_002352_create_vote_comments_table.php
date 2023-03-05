@@ -20,6 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger('comment_id');
             $table->foreign('comment_id')->references('id')->on('votes');
 
+            $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')->references('id')->on('users');
+
         });
     }
 

@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vote_responses', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
+            $table->string('tag')->nullable();
             $table->timestamps();
 
-            $table->unsignedBigInteger('response_id');
-            $table->foreign('response_id')->references('id')->on('votes');
-
-            $table->unsignedBigInteger('student_id');
-            $table->foreign('student_id')->references('id')->on('users');
+            $table->unsignedBigInteger('post_id');
+            $table->foreign('post_id')->references('id')->on('posts');
         });
     }
 
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vote_responses');
+        Schema::dropIfExists('tags');
     }
 };
