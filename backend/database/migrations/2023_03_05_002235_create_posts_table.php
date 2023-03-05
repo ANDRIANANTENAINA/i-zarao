@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('tags')->nullable();
             $table->text('content')->nullable();
             $table->string('slug')->nullable();
             $table->string('image')->nullable();
@@ -26,8 +25,8 @@ return new class extends Migration
             $table->string('author');
 
 
-            $table->unsignedBigInteger('matricule');
-            $table->foreign('matricule')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

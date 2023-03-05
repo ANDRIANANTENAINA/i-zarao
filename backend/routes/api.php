@@ -22,14 +22,14 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/users', [AuthController::class, 'index']);
 
 
-Route::get('/post',[PostController::class,'index']);
+Route::get('/posts',[PostController::class,'index']);
 Route::get('/post/{id}',[PostController::class,'show']);
 
 
 //Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth:api');
 // Route::post('/logout', 'AuthController@logout')->middleware('auth:api');
 
-Route::get('/protected', 'ProtectedController@index')->middleware('auth:api');
+//Route::get('/protected', 'ProtectedController@index')->middleware('auth:api');
 
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

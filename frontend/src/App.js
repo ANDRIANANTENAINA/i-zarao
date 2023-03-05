@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Profile from "./component/Profile/profile";
 import Login from "./component/Login/login";
 import {useEffect, useState} from "react";
+import Post from "./component/Post/Post";
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -29,17 +30,20 @@ function App() {
 
     return (
         <div className="App">
-            {!isLoggedIn && <Login />}
-            {isLoggedIn && (
-                <Router>
-                    <Navbar onLogout={handleLogout} />
-                    <Routes>
-                        <Route path='/home' element={<Home />} />
-                        <Route path='/chat' element={<Chat />} />
-                        <Route path='/profile' element={<Profile />} />
-                    </Routes>
-                </Router>
-            )}
+                {!isLoggedIn &&
+                    <Login/>
+                }
+                {isLoggedIn && (
+                    <Router>
+                        <Navbar onLogout={handleLogout} />
+                        <Routes>
+                            <Route path='/home' element={<Home />} />
+                            <Route path='/chat' element={<Chat />} />
+                            <Route path='/profile' element={<Profile />} />
+                            <Route path="/post/:id/:title" element={<Post />} />
+                        </Routes>
+                    </Router>
+                )}
         </div>
     );
 }

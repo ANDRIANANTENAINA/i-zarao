@@ -55,7 +55,7 @@ public function login(Request $request)
         $user = Auth::user();
         $token = $request->user()->createToken('API Token')->accessToken;
         return response()->json([
-            'user' => $user->toArray(),
+            'user' => $user,
             'token' => $token,
             'redirectTo' => '/home' // This is the URL to redirect to
         ]);
