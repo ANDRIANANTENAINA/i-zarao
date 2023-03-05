@@ -5,10 +5,10 @@ run command:
 cd /backend
     - composer install
     - php artisan key:generate
-    - php artisan run migratation
+    - php artisan run migrate --seed
     - php artisan serve
 
 cd frontend
     - npm install
-    - npm run dev (Starts the development server)
+    - npm start (Starts the development server)
 
