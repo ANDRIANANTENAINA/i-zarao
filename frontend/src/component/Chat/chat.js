@@ -1,6 +1,5 @@
 import React from "react";
 import './chat.css'
-import send from '../../image/send.svg'
 
 
 const Chat = () =>{
