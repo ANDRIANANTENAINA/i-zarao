@@ -100,8 +100,14 @@ const  Post = () =>{
                         </div>
                     </div>
                 ))}
-            <div>
-
+            <div className="flex flex-col mt-5">
+                <textarea className="send_ms mx-5 rounded p-2 border-2 border-gray-200 "
+                          placeholder="vos question ?"></textarea>
+                <div className="btn_ms mx-5 mt-5 space-x-2">
+                    <input type="file" id="file" className="input_file"/>
+                    <label htmlFor="file" className="green rounded px-4"> Ajouter un fichier</label>
+                    <button className="green px-4  rounded">Envoyer</button>
+                </div>
             </div>
         </div>
     )
