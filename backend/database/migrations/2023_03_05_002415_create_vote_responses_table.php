@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unsignedBigInteger('response_id');
-            $table->foreign('response_id')->references('id')->on('votes');
+            $table->foreign('response_id')->references('id')->on('responses');
 
             $table->unsignedBigInteger('student_id');
             $table->foreign('student_id')->references('id')->on('users');
