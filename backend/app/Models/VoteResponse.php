@@ -11,4 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 class VoteResponse extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'response_id',
+    ];
 }

@@ -22,7 +22,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/users', [AuthController::class, 'index']);
 
 
-Route::get('/post',[PostController::class,'index']);
+Route::get('/posts',[PostController::class,'index']);
 Route::get('/post/{id}',[PostController::class,'show']);
 
 
