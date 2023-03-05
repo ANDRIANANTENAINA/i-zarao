@@ -36,12 +36,6 @@ function App() {
                 {isLoggedIn && (
                     <Router>
                         <Navbar onLogout={handleLogout} />
-                        <Routes>
-                            <Route path='/home' element={<Home />} />
-                            <Route path='/chat' element={<Chat />} />
-                            <Route path='/profile' element={<Profile />} />
-                            <Route path="/post/:id/:title" element={<Post />} />
-                        </Routes>
                     </Router>
                 )}
         </div>

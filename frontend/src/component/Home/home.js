@@ -2,9 +2,10 @@ import React, {useEffect, useState} from "react";
 import './home.css'
 import axios from 'axios';
 import {Link} from "react-router-dom";
-const Home = () =>{
+const Home = (results) =>{
 
     const [data, setData] = useState([]);
+
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/posts')
@@ -15,8 +16,9 @@ const Home = () =>{
                 console.log(error);
             });
     }, []);
-
+    console.log("data",data);
     return(
+
         <div className="flex flex-row justify-between space-x-3 px-10 py-5 overflow-hidden">
 
             <div className="content shadow-xl border-t rounded-xl w-1/6 p-3">
@@ -24,7 +26,8 @@ const Home = () =>{
             </div>
 
                 <div className="content shadow-xl border-t rounded-xl w-2/3 px-5">
-                    {data.map(item => (
+                    {results.results.length > 0 ? (
+                     results.results.map(item => (
                         <div className="card border-b-2 relative py-2">
                             <p className="text-gray-500 hover:text-gray-700 pl-2 taille">0 votes</p>
                             <Link to={`/Post/${item.id}/${item.title}`}  key={item.id} className="text-indigo-800 hover:text-indigo-900 taille_title "> {item.title}</Link>
@@ -52,8 +55,15 @@ const Home = () =>{
                                 ) : (
                                     <div className="absolute"></div>
                             )}
+
+
+
                         </div>
-                    ))}
+                    ))) : (
+                        <div className="flex flex-row justify-center">
+                            <p className="text-gray-500 hover:text-gray-700 pl-2 taille">Aucune Résultat !</p>
+                        </div>
+                    )}
                 </div>
 
             <div className="contentshadow-xl border-t rounded-xl w-1/6 p-3">
