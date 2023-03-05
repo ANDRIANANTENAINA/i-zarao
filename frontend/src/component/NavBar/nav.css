@@ -50,3 +50,39 @@
 .count-notif{
     font-size: xx-small;
 }
+
+.notification{
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(128, 128, 128, 0.429);
+    align-items: center;
+}
+
+.notification1{
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(114, 216, 249, 0.607);
+    align-items: center;
+}
+
+
+.discu_flex{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.notification img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+
+.notification1 img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+
