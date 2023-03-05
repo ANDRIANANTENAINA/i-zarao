@@ -36,7 +36,7 @@ class Navbar extends Component {
         }
         return(
             <Fragment>
-                <div className="nav z-30">
+                <div className="nav z-30 shadow-xl">
                     <Link to="/home" className="logo">
                         <img src= {logo} alt=""/>
                     </Link>
