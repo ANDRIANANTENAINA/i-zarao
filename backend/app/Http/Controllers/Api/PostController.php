@@ -24,6 +24,16 @@ class PostController extends Controller
         return response()->json($post);
     }
 
+    public function search(Request $request)
+    {
+        $query = $request->get('q');
+        $post = Post::with('tags', 'responses')
+            ->where('title', 'like', "%$query%")
+            ->orWhere('content', 'like', "%$query%")
+            ->get();
+        return response()->json($post);
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [

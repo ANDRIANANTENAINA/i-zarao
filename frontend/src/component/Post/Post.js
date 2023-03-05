@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 const  Post = () =>{
 
     const [data, setData] = useState([]);
-    const id = useParams();
 
+    const id = useParams();
     const postId = id.id;
 
 
