@@ -31,6 +31,11 @@ const  Post = () =>{
                             <li key={tag.id}>{tag.tag}</li>
                         ))}
                     </ul>
+                    <ul>
+                        {post.responses.map(response => (
+                            <li key={response.id}>{response.content}</li>
+                        ))}
+                    </ul>
                 </div>
             ))}
         </div>
