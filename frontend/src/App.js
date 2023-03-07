@@ -7,30 +7,14 @@ import axios from 'axios';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [user, setUser] = useState(null);
 
     useEffect(() => {
         const token = localStorage.getItem('token');
-
-        const fetchUser = async () => {
-            try {
-                const response = await axios.get('/api/user', {
-                    headers: {
-                        Authorization: `Bearer ${token}` // pass the token in the headers of the request
-                    }
-                });
-
-                setUser(response.data); // set the user state with the response data
-            } catch (error) {
-                console.log(error);
-            }
-        };
 
         if (token) {
             setIsLoggedIn(true);
         }
 
-        fetchUser();
     }, []);
 
     const handleLogin = () => {
@@ -49,7 +33,7 @@ function App() {
                 }
                 {isLoggedIn && (
                     <Router>
-                        <Navbar onLogout={handleLogout} users={user} />
+                        <Navbar onLogout={handleLogout} />
                     </Router>
                 )}
         </div>
